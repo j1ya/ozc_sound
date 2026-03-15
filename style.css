@@ -1,1 +1,63 @@
-/* Add styles here */
+:root {
+    --background-light: #f0f0f0;
+    --text-light: #333;
+    --primary-light: #007bff;
+    --background-dark: #1a1a1a;
+    --text-dark: #f0f0f0;
+    --primary-dark: #007bff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.75" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100" height="100" filter="url(%23n)" opacity="0.05"/%3E%3C/svg%3E');
+}
+
+body.dark-mode {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --primary-light: var(--primary-dark);
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: var(--background-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#theme-toggle {
+    background: var(--primary-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--primary-light), 0 0 20px var(--primary-light);
+    transition: box-shadow 0.3s;
+}
+
+#theme-toggle:hover {
+    box-shadow: 0 0 15px var(--primary-light), 0 0 30px var(--primary-light);
+}
+
+#theme-toggle svg {
+    color: white;
+}
